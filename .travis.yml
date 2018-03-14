@@ -4,3 +4,6 @@ python:
   
 # install all dependencies
 install: "pip install -r requirements.txt"
+
+# run tests
+script: server_test.py
