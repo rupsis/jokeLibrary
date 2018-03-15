@@ -17,4 +17,12 @@ export class JokeComponent implements OnInit {
   ngOnInit() {
   }
 
+  editJoke(){
+    console.log("edit the joke")
+  }
+
+  deleteJoke(){
+    console.log("delete the joke")
+  }
+
 }
