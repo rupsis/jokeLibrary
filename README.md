@@ -12,3 +12,4 @@ To run the server you'll need the following dependancies:
 My Local PostgreSQL server is configured to trust connections, to connect to local server, either configure you're server to trust local connections, or pass in the password to the database connection: `db = psycopg2.connect("dbname=jokeLibrary user=postgres, password=yourPassWord")`
 
 To start the server, simple run `FLASK_APP=server.py flask run` on the command line
+*Note* On Windows, you'll have to `set FLASK_APP=server.py` then run `flask run`
