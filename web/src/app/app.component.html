@@ -1,5 +1,14 @@
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
+<div id="joke-input" style="text-align:center">
+ <form>
+    <div class="form-group">
+        <label for="jokeInput"></label>
+        <textarea class="form-control" id="jokeInput" rows="3" 
+        placeholder="Jot down that joke!"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Joke</button>
+ </form>
+</div>
+
+<div *ngFor="let joke of jokes" id="jokeList">
+   <joke [jokeModel]="joke"></joke>
 </div>
