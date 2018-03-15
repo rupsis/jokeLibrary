@@ -1,1 +1,3 @@
 /docs/*.mdj
+
+__pycache__
