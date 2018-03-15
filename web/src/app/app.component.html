@@ -1,14 +1,22 @@
-<div id="joke-input" style="text-align:center">
- <form>
-    <div class="form-group">
-        <label for="jokeInput"></label>
-        <textarea class="form-control" id="jokeInput" rows="3" 
-        placeholder="Jot down that joke!"></textarea>
+<nav class="navbar navbar-dark bg-primary">
+    <div class="navbar-brand ">
+      <h3 >Joke Library</h3>
     </div>
-    <button type="submit" class="btn btn-primary">Add Joke</button>
- </form>
-</div>
+</nav>
 
-<div *ngFor="let joke of jokes" id="jokeList">
-   <joke [jokeModel]="joke"></joke>
+<div class="container">
+  <div id="joke-input" style="text-align:center">
+  <form>
+      <div class="form-group">
+          <label for="jokeInput"></label>
+          <textarea class="form-control" id="jokeInput" rows="3" 
+          placeholder="Jot down that joke!"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Add Joke</button>
+  </form>
+  </div>
+
+  <div *ngFor="let joke of jokes" id="jokeList">
+    <joke [jokeModel]="joke"></joke>
+  </div>
 </div>
