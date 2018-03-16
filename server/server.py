@@ -48,9 +48,9 @@ def update_joke(id):
 # Delete
 @app.route("/jokes/<id>", methods=['DELETE'])
 def delete_joke(id):
-    cur.execute("DELETE FROM jokes  WHERE Id = (%s)", (id))
+    cur.execute("DELETE FROM jokes  WHERE id = (%s)", (id,))
     db.commit()
-    return 'Successfully Deleted'
+    return 'Success', 200, {'Content-Type': 'text/plain'}
 
 
 print("server running")
