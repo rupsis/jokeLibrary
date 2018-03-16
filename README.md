@@ -21,3 +21,6 @@ to start the front end, `cd` into the `web` directory and:
 1. `npm install`  to install all of the node modules
 2. run `ng serve` to start the front end server
 3. navigate to http://localhost:4200/ 
+
+## Unit Test 
+To run the unit tests, `cd` into the `/server` directory and run `python server_test.py` to run the unit tests
