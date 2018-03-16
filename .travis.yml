@@ -6,4 +6,4 @@ python:
 install: "pip install -r requirements.txt"
 
 # run tests
-script: 
+script: python server/travis_test.py
