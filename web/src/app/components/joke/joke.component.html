@@ -1,11 +1,26 @@
 <div class="card" style="width: 100%;">
   <div class="card-body">
-    <p class="card-text">
-        {{jokeModel.content}}
-    </p>
-    <div class="float-right">
-      <a href="#" class="card-link"><i class="fa fa-pencil fa-1x" aria-hidden="true"></i></a>
-      <a href="#" class="card-link"><i class="fa fa-trash fa-1x" aria-hidden="true"></i></a>
+    <div [hidden]="edit">
+      <p class="card-text">
+          {{jokeModel.content}}
+      </p>
+      <div class="float-right">
+        <a  class="card-link" (click)="updateJoke()"><i class="fa fa-pencil fa-1x" aria-hidden="true"></i></a>
+        <a  class="card-link" (click)="deleteJoke()"><i class="fa fa-trash fa-1x" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div [hidden]="!edit">
+      <form>
+        <div class="form-group">
+          <label for="jokeUpdate">Update joke</label>
+          <textarea class="form-control" id="jokeUpdate" rows="3" 
+          [formControl]="jokeUpdate" ></textarea>
+          <div class="float-right">
+            <a  class="card-link" (click)="saveJoke()"><i class="fa fa-floppy-o fa-1x" aria-hidden="true"></i></a>
+            <a  class="card-link" (click)="toggleEdit()"><i class="fa fa-ban fa-1x" aria-hidden="true"></i></a>
+          </div>
+      </div>
+      </form>
     </div>
   </div>
 </div>

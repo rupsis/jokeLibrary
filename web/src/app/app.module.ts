@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { JokeComponent } from './components/joke/joke.component';
-
+import {  FormsModule,  ReactiveFormsModule  } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,9 @@ import { JokeComponent } from './components/joke/joke.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule  
   ],
   providers: [],
   bootstrap: [AppComponent]

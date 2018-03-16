@@ -10,9 +10,9 @@
       <div class="form-group">
           <label for="jokeInput"></label>
           <textarea class="form-control" id="jokeInput" rows="3" 
-          placeholder="Jot down that joke!"></textarea>
+          placeholder="Jot down that joke!" [formControl]="jokeData"></textarea>
       </div>
-      <button type="submit" class="btn btn-primary">Add Joke</button>
+      <button class="btn btn-primary" (click)="addJoke()">Add Joke</button>
   </form>
   </div>
 
