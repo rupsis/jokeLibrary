@@ -34,9 +34,7 @@ export class AppComponent implements OnInit  {
   }
 
   ngOnInit(){
-    // this.form = new FormGroup({
-    //   joke: new FormControl()
-    // });
+
   }
 
   // Return get all of the jokes from the server
@@ -62,6 +60,10 @@ export class AppComponent implements OnInit  {
       this.http.post(this.url + "/jokes", joke, httpOptions)
       .subscribe(res =>{
         console.log(res)
+        this.joke = new jokeModel();
+        this.joke.content = res['joke'];
+        this.jokes.push(this.joke);
+        window.location.reload();
       }, 
       err =>{ 
         console.log("error adding joke")
@@ -69,4 +71,6 @@ export class AppComponent implements OnInit  {
       console.log("posting jokes to : " + this.url + "/jokes");
       console.log(this.jokeData.value);
   }
+
+ 
 }
