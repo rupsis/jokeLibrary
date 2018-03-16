@@ -39,7 +39,6 @@ export class AppComponent implements OnInit  {
 
   // Return get all of the jokes from the server
   getJokes(){
-    console.log("getting all of the jokes from: " + this.url + "/jokes");
     this.http.get(this.url + "/jokes").subscribe(data => {
         for(var i in data){
           this.joke = new jokeModel();
@@ -59,7 +58,6 @@ export class AppComponent implements OnInit  {
       var joke = { "joke": this.jokeData.value };
       this.http.post(this.url + "/jokes", joke, httpOptions)
       .subscribe(res =>{
-        console.log(res)
         this.joke = new jokeModel();
         this.joke.content = res['joke'];
         this.jokes.push(this.joke);
@@ -68,8 +66,6 @@ export class AppComponent implements OnInit  {
       err =>{ 
         console.log("error adding joke")
       });
-      console.log("posting jokes to : " + this.url + "/jokes");
-      console.log(this.jokeData.value);
   }
 
  
