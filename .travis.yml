@@ -6,4 +6,4 @@ python:
 install: "pip install -r requirements.txt"
 
 # run tests
-script: python server/tests/server_test.py
+script: python server/server_test.py
