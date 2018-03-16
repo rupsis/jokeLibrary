@@ -1,19 +1,4 @@
-import sys
-import os
-import json
-from datetime import date, timedelta
-from flask import Flask, request, redirect, url_for
-from flask_cors import CORS
-import psycopg2
-
-
-# Database connection
-db = psycopg2.connect("dbname=jokeLibrary user=postgres")
-cur = db.cursor()
-
-
-app = Flask(__name__)
-CORS(app)
+from project import app, db, cur
 
 # Get All
 @app.route("/jokes", methods=['GET'])

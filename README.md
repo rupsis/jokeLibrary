@@ -13,8 +13,8 @@ In PostgreSQL Server (I recommend pgAdmin) create a database named `jokeLibrary`
 My Local PostgreSQL server is configured to trust connections, to connect to local server, either configure you're server to trust local connections, or pass in the password to the database connection: `db = psycopg2.connect("dbname=jokeLibrary user=postgres, password=yourPassWord")`
 
 ## Starting the server
-To start the server, change directory to `/server` and run `FLASK_APP=server.py flask run` on the command line
-*Note* On Windows, you'll have to `set FLASK_APP=server.py` then run `flask run`
+To start the server, change directory to `/server` and run `FLASK_APP=run.py flask run` on the command line
+*Note* On Windows, you'll have to `set FLASK_APP=run.py` then run `flask run`
 
 ## Starting the front end
 to start the front end, `cd` into the `web` directory and:
